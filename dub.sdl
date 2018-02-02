@@ -1,0 +1,9 @@
+name "adl-validate"
+description "A minimal D application."
+authors "doobnet"
+copyright "Copyright © 2018, doobnet"
+license "BSL-1.0"
+
+dflags "-static" platform="linux-ldc"
+libs "onig"
+lflags "-Loniguruma/src/.libs"

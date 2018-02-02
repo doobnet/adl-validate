@@ -1,0 +1,16 @@
+language: d
+
+d:
+  - dmd
+  - ldc
+os:
+  - linux
+  - osx
+
+before_script:
+  - git clone https://github.com/kkos/oniguruma
+  - cd oniguruma
+  - git checkout v6.7.1
+  - autoreconf -vfi
+  - ./configure
+  - make -j 4
