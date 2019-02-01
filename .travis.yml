@@ -9,8 +9,9 @@ os:
 
 before_script:
   - git clone https://github.com/kkos/oniguruma
-  - cd oniguruma
+  - pushd oniguruma > /dev/null
   - git checkout v6.7.1
   - autoreconf -vfi
   - ./configure
   - make -j 4
+  - popd > /dev/null
